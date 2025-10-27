@@ -77,6 +77,14 @@ public class Main {
     }
 
     private static void transfer(Scanner sc, BankService bankService) {
+        System.out.println("From Account : ");
+        String from = sc.nextLine().trim();
+        System.out.println("To Account : ");
+        String to = sc.nextLine().trim();
+        System.out.println("Amount: ");
+        Double amount = Double.valueOf(sc.nextLine().trim());
+        bankService.transfer(from, to, amount, "Transfer");
+        System.out.println("Amount Transferred from " + from + " to " + to);
     }
 
     private static void statement(Scanner sc, BankService bankService) {
