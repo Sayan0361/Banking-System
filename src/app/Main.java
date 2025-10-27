@@ -68,6 +68,12 @@ public class Main {
     }
 
     private static void withdraw(Scanner sc, BankService bankService) {
+        System.out.println("Account Number: ");
+        String accountNumber = sc.nextLine().trim();
+        System.out.println("Amount: ");
+        Double amount = Double.valueOf(sc.nextLine().trim());
+        bankService.withdraw(accountNumber, amount, "Withdraw");
+        System.out.println("Amount Withdrawn");
     }
 
     private static void transfer(Scanner sc, BankService bankService) {
